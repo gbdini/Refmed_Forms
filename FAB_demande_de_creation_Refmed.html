@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de création d’un article FAB (PM, série...) dans REFMED</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 1.2em;
+            background-color: #ffb6c1;
+            padding: 6px 12px;
+        }
+        form {
+            max-width: 100%;
+            margin: 0;
+        }
+        .section-title {
+            color: navy;
+            text-align: left;
+            white-space: nowrap;
+            font-size: 1.1em;
+        }
+        .field {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .field label {
+            flex: 0 0 300px;
+            margin-bottom: 0;
+            margin-right: 10px;
+            white-space: nowrap;
+            text-align: right;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .field .input-group {
+            flex: 0 0 400px;
+            display: flex;
+            gap: 10px;
+        }
+        .field .input-group input,
+        .field .input-group select {
+            flex: 1;
+            width: calc(50% - 5px);
+        }
+        .field input,
+        .field select,
+        .field textarea {
+            width: 400px;
+            font-size: 0.9em;
+            background-color: #f0f8ff;
+        }
+        .large-field {
+            width: 600px;
+            background-color: #f0f8ff;
+        }
+        table input,
+        table select {
+            background-color: #f0f8ff;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        #demandeur {
+            max-width: 600px;
+        }
+        input, select, textarea {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9em;
+            box-sizing: border-box;
+        }
+        select option {
+            font-size: 0.9em;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table th {
+            font-size: 0.9em;
+        }
+        .col1 {
+            width: 80px;
+            text-align: center;
+        }
+        .col1 input {
+            max-width: 100%;
+        }
+        .col2 {
+            width: 300px;
+        }
+        #conditionnementsTable td {
+            text-align: center;
+        }
+        #conditionnementsTable input,
+        #conditionnementsTable select {
+            width: 95%;
+        }        .col3 {
+            width: 100px;
+        }
+        .col4 {
+            width: 100px;
+        }
+        .col5 {
+            width: 100px;
+        }
+        .col6 {
+            width: 100px;
+        }
+        .col7 {
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demande de création d’un article FAB (PM, série...) dans REFMED</h1>
+    <form id="formulaire">
+        <h2 class="section-title">Informations générales</h2>
+        <div class="field">
+            <label for="demandeur">Demandeur *:</label>
+            <input type="text" id="demandeur" name="demandeur" required class="large-field" placeholder="visa ou nom complet">
+        </div>
+
+        <div class="field">
+            <label for="nom_commercial">Nom de la préparation *:</label>
+            <input type="text" id="nom_commercial" name="nom_commercial" required class="large-field" placeholder="Ex : Quétiapine CHUV">
+        </div>
+
+        <div class="field">
+            <label for="principe_actif">Principe actif *:</label>
+            <input type="text" id="principe_actif" name="principe_actif" required class="large-field">
+        </div>
+
+        <div class="field">
+            <label for="excipients">Excipients *:</label>
+            <input type="text" id="excipients" name="excipients" required class="large-field">
+        </div>
+
+        <div class="field">
+            <label for="forme_galenique" title="Forme galénique et non pas conditionnement primaire. Ex : solution injectable et non pas « stylo injectable »." style="cursor:help;">Forme galénique *:</label>
+            <input type="text" id="forme_galenique" name="forme_galenique" list="forme_galenique_list" class="large-field" placeholder="ex : caps ; suspension... Voir liste déroulante.">
+            <datalist id="forme_galenique_list">
+                <option value="aérosol">
+                <option value="ampoule sèche">
+                <option value="applicateur">
+                <option value="bande">
+                <option value="bandelette">
+                <option value="bâton">
+                <option value="baume">
+                <option value="capsule">
+                <option value="capsule à croquer">
+                <option value="capsule à ouvrir">
+                <option value="capsule gastro-résistante">
+                <option value="capsule molle">
+                <option value="capsule rectale">
+                <option value="capsule retard">
+                <option value="capsule vaginale">
+                <option value="cassette(s)">
+                <option value="cataplasme">
+                <option value="colle tissulaire">
+                <option value="collyre">
+                <option value="compresse">
+                <option value="comprimé">
+                <option value="comprimé à croquer">
+                <option value="comprimé à libération prolongée">
+                <option value="comprimé à mâcher">
+                <option value="comprimé à sucer">
+                <option value="comprimé buccal">
+                <option value="comprimé disp">
+                <option value="comprimé eff">
+                <option value="comprimé filmé">
+                <option value="comprimé gastro-résistant">
+                <option value="comprimé orodisp">
+                <option value="comprimé retard">
+                <option value="comprimé subling">
+                <option value="comprimé vaginal">
+                <option value="comprimés matriciels retard">
+                <option value="concentré pour injection">
+                <option value="cpr">
+                <option value="crème">
+                <option value="dragée">
+                <option value="dragée à croquer">
+                <option value="dragée à sucer">
+                <option value="dragée retard">
+                <option value="emplâtre">
+                <option value="émulgel">
+                <option value="émulsion">
+                <option value="émulsion inj">
+                <option value="émulsion lavante">
+                <option value="émulsion perf">
+                <option value="éponge">
+                <option value="fioline sèche">
+                <option value="gaz pour inhalation">
+                <option value="gel">
+                <option value="gel buccal">
+                <option value="gel vaginal">
+                <option value="globule">
+                <option value="gomme à mâcher">
+                <option value="gouttes nasales">
+                <option value="gouttes nasales">
+                <option value="granulés">
+                <option value="granulés eff">
+                <option value="granulés retards">
+                <option value="huile">
+                <option value="hydrolotion">
+                <option value="implant">
+                <option value="insert ophtalmique">
+                <option value="lait">
+                <option value="lancette(s)">
+                <option value="lingette">
+                <option value="liniment">
+                <option value="lipolotion">
+                <option value="lotion">
+                <option value="mèche">
+                <option value="mousse">
+                <option value="mousse nettoyante">
+                <option value="mousse rectale">
+                <option value="onguent">
+                <option value="ovule">
+                <option value="patch">
+                <option value="pâte">
+                <option value="pommade">
+                <option value="poudre">
+                <option value="poudre eff">
+                <option value="poudre nasale">
+                <option value="poudre stérile">
+                <option value="sachet">
+                <option value="savon">
+                <option value="serviette">
+                <option value="shampooing">
+                <option value="sirop">
+                <option value="solution">
+                <option value="solution buccale">
+                <option value="solution buvable">
+                <option value="solution de rinçage">
+                <option value="solution inj">
+                <option value="solution irrigation">
+                <option value="solution perfusion">
+                <option value="solution pour injection intraoculaire">
+                <option value="solution pour instillation">
+                <option value="solution pour instillation intraoculaire">
+                <option value="solution pour tamponnage oculaire">
+                <option value="solution stérile">
+                <option value="spray">
+                <option value="spray nasal">
+                <option value="stérilet intra-utérin">
+                <option value="stick">
+                <option value="suppositoire">
+                <option value="suppositoire retard">
+                <option value="susp cell perf">
+                <option value="suspension">
+                <option value="suspension inj">
+                <option value="suspension ophtalmique">
+                <option value="suspension retard">
+                <option value="tampon">
+                <option value="teinture">
+                <option value="tisane">
+            </datalist>
+        </div>
+
+        <div class="field">
+            <label for="dosage">Dosage / concentration *:</label>
+            <div class="input-group">
+                <input type="number" id="dosage_num" name="dosage_num" required placeholder="Valeur numérique">
+                <input type="text" id="dosage_unit" name="dosage_unit" list="unites_list" required placeholder="unité">
+                <datalist id="unites_list">
+                    <option value="%">
+                    <option value="g">
+                    <option value="g/L">
+                    <option value="g/ml">
+                    <option value="GBq">
+                    <option value="IR">
+                    <option value="kBq/mL">
+                    <option value="MBq/ml">
+                    <option value="mcg">
+                    <option value="mcg/dose">
+                    <option value="mcg/g">
+                    <option value="mcg/h">
+                    <option value="mcg/mL">
+                    <option value="mEq">
+                    <option value="mg">
+                    <option value="mg/dose">
+                    <option value="mg/g">
+                    <option value="mg/mL">
+                    <option value="Mio bactéries">
+                    <option value="Mio cellules">
+                    <option value="Mio cellules (eASC)">
+                    <option value="mio génomes du vecteur (vg)/ml">
+                    <option value="mio PFU">
+                    <option value="mio PFU/mL">
+                    <option value="mio TCID">
+                    <option value="mio TCID/mL">
+                    <option value="mio UI">
+                    <option value="mio UI/0.5 mL">
+                    <option value="mio UI/mL">
+                    <option value="mios TCID50/mL">
+                    <option value="mmol">
+                    <option value="mmol/L">
+                    <option value="mmol/mL">
+                    <option value="mol">
+                    <option value="Sans unité">
+                    <option value="SQ-Bet">
+                    <option value="SQ-HDM">
+                    <option value="SQ-T">
+                    <option value="UI">
+                    <option value="UI/dose">
+                    <option value="UI/g">
+                    <option value="UI/mL">
+                </datalist>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="Condition de conservation">Condition de conservation *:</label>
+            <select id="Condition de conservation" name="Condition de conservation" required>
+                <option value="">Sélectionnez...</option>
+                <option value="T. amb.">T. amb.</option>
+                <option value="T. amb. & abri lumière">T. amb. & abri lumière</option>
+                <option value="Frigo">Frigo</option>
+                <option value="Congélateur">Congélateur</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="conservation_apres_ouverture">Durée de conservation *:</label>
+            <input type="text" id="conservation_apres_ouverture" name="conservation_apres_ouverture" required placeholder="Ex : 30 jours">
+        </div>
+
+        <div class="field">
+            <label for="type_preparation">Type de préparation *:</label>
+            <select id="type_preparation" name="type_preparation" required>
+                <option value="">Sélectionnez...</option>
+                <option value="PM">PM</option>
+                <option value="Petite série">Petite série</option>
+                <option value="Autre, voir remarque">Autre, voir remarque</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="info_pro">Préparation centralisée *:</label>
+            <select id="info_pro" name="info_pro" required>
+                <option value="">Sélectionnez...</option>
+                <option value="oui">oui</option>
+                <option value="non">non</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="remarque">Remarque :</label>
+            <textarea id="remarque" name="remarque"></textarea>
+        </div>
+
+        <h2 class="section-title">Conditionnements</h2>
+        <table id="conditionnementsTable" style="width: auto; border-collapse: collapse; margin-bottom: 15px; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #ccc; padding: 8px;" class="col1">Nb d’unités<br>par emballage</th>
+                    <th style="border: 1px solid #ccc; padding: 8px; cursor:help;" class="col2" title="Indiquer ici le type de conditionnement et son volume ou sa dose totale. Exemples : flacon 2 mL ; tube 5 g ; compresses 5x5 cm etc.">Conditionnement primaire (avec volume ou dose totale)</th>
+                    <th style="border: 1px solid #ccc; padding: 8px; cursor:help;" class="col3" title="Prix LMT ou prix facturé (si non LMT)">Prix LMT (CHF)</th>
+                    <th style="border: 1px solid #ccc; padding: 8px;" class="col4">Prix ex-factory (HT)</th>
+                    <th style="border: 1px solid #ccc; padding: 8px;" class="col5">Code-barres</th>
+                    <th style="border: 1px solid #ccc; padding: 8px;" class="col7">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="templateRow" style="display: none;">
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col1"><input type="text" name="nb_unites[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col2"><input type="text" name="conditionnement[]" placeholder="ex : flacon 2 ml ; tube 5 g..."></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col3"><input type="text" name="prix[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col4"><input type="text" name="prix_exfactory[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col5"><input type="text" name="Code-barres[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col7"><button type="button" class="deleteRow" title="Supprimer cette ligne">-</button></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col1"><input type="text" name="nb_unites[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col2"><input type="text" name="conditionnement[]" placeholder="ex : flacon 2 ml ; tube 5 g..."></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col3"><input type="text" name="prix[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col4"><input type="text" name="prix_exfactory[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col5"><input type="text" name="Code-barres[]"></td>
+                    <td style="border: 1px solid #ccc; padding: 8px;" class="col7"><button type="button" class="deleteRow" title="Supprimer cette ligne">-</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" id="addRow" style="margin-bottom: 15px;" title="Ajouter une ligne de conditionnement">+</button>
+
+        <div id="section-controle" style="display: none;">
+            <h2 class="section-title">Contrôle visuel des articles importés lors de la réception</h2>
+            <p style="font-style: italic; font-weight: lighter; margin-bottom: 15px;">*Une fois réceptionné, contrôler que les données sur l’article correspondent aux informations de ce formulaire et des données saisies dans Refmed. Principalement : principe actif, dosage ou concentration, volume.</p>
+
+            <table id="controleTable" style="width: auto; border-collapse: collapse; margin-bottom: 15px;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Conforme / Non Conforme</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Date</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Visa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;"></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;"></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px;"></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;"></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="field" style="margin-top: 20px;">
+            <label></label>
+            <div>
+                <input type="file" id="fileInput" multiple accept=".pdf,image/jpeg,image/png" style="display:none">
+                <button type="button" id="btnAttach" style="background-color:#1976d2;">Joindre un document</button>
+                <button type="button" id="btnPDF" style="margin-left:10px;">Exporter PDF</button>
+                <ul id="attachList" style="margin-top:8px; padding-left:0; list-style:none; font-size:0.85em; color:#333;"></ul>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script>
+        // ---- Gestion des pièces jointes ----
+        const attachedFiles = [];
+
+        document.getElementById('btnAttach').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+            Array.from(e.target.files).forEach(file => attachedFiles.push(file));
+            renderAttachList();
+            this.value = '';
+        });
+
+        function renderAttachList() {
+            const ul = document.getElementById('attachList');
+            ul.innerHTML = '';
+            attachedFiles.forEach((file, idx) => {
+                const li = document.createElement('li');
+                li.style.marginBottom = '4px';
+                li.innerHTML = `📎 ${file.name} <button type="button" data-idx="${idx}" class="removeAttach" style="padding:2px 8px;font-size:0.8em;background:#e53935;margin-left:8px;">✕</button>`;
+                ul.appendChild(li);
+            });
+        }
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('removeAttach')) {
+                attachedFiles.splice(parseInt(e.target.dataset.idx), 1);
+                renderAttachList();
+            }
+        });
+
+        // ---- Export PDF ----
+        document.getElementById('btnPDF').addEventListener('click', async function () {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
+
+            const marginL = 12;
+            const marginR = 12;
+            const pageW = 210;
+            const contentW = pageW - marginL - marginR;
+            const lineH = 5.5;
+            let y = 14;
+
+            // ---- Helpers ----
+            function checkY(needed) {
+                if (y + needed > 285) y = 285; // clamp to bottom
+            }
+
+            function drawTitle(text) {
+                pdf.setFont('helvetica', 'bold');
+                pdf.setFontSize(11);
+                pdf.setTextColor(0, 0, 128);
+                pdf.text(text, marginL, y);
+                y += 1;
+                pdf.setDrawColor(0, 0, 128);
+                pdf.setLineWidth(0.3);
+                pdf.line(marginL, y, pageW - marginR, y);
+                y += 4;
+                pdf.setTextColor(0, 0, 0);
+            }
+
+            function drawField(label, value) {
+                pdf.setFont('helvetica', 'bold');
+                pdf.setFontSize(8.5);
+                pdf.text(label, marginL, y);
+                pdf.setFont('helvetica', 'normal');
+                pdf.text(value || '—', marginL + 72, y);
+                y += lineH;
+            }
+
+            function getVal(id) {
+                const el = document.getElementById(id);
+                return el ? el.value.trim() : '';
+            }
+
+            // ---- En-tête ----
+            pdf.setFont('helvetica', 'bold');
+            pdf.setFontSize(12);
+            pdf.text('Demande de création d\'un article FAB9 dans REFMED', pageW / 2, y, { align: 'center' });
+            y += 7;
+            pdf.setFont('helvetica', 'italic');
+            pdf.setFontSize(9);
+            pdf.text('Transmettre à refmed@chuv.ch', pageW / 2, y, { align: 'center' });
+            y += 8;
+
+            // ---- Informations générales ----
+            drawTitle('Informations générales');
+
+            const dosage = [getVal('dosage_num'), getVal('dosage_unit')].filter(Boolean).join(' ');
+
+            drawField('Demandeur :', getVal('demandeur'));
+            drawField('Nom de la préparation :', getVal('nom_commercial'));
+            drawField('Principe actif :', getVal('principe_actif'));
+            drawField('Excipients :', getVal('excipients'));
+            drawField('Forme galénique :', getVal('forme_galenique'));
+            drawField('Dosage / concentration :', dosage);
+            drawField('Condition de conservation :', getVal('Condition de conservation'));
+            drawField('Durée de conservation :', getVal('conservation_apres_ouverture'));
+            drawField('Type de préparation :', getVal('type_preparation'));
+            drawField('Préparation centralisée :', getVal('info_pro'));
+
+            const remarque = getVal('remarque');
+            if (remarque) {
+                pdf.setFont('helvetica', 'bold');
+                pdf.setFontSize(8.5);
+                pdf.text('Remarque :', marginL, y);
+                pdf.setFont('helvetica', 'normal');
+                const lines = pdf.splitTextToSize(remarque, contentW - 72);
+                pdf.text(lines, marginL + 72, y);
+                y += Math.max(lineH, lines.length * lineH);
+            }
+
+            y += 3;
+
+            // ---- Conditionnements ----
+            drawTitle('Conditionnements');
+
+            // Colonnes : [label, largeur, alignement]
+            const cols = [
+                { label: 'Nb\nunités', w: 16, align: 'center' },
+                { label: 'Conditionnement primaire\n(avec volume ou dose totale)', w: 57, align: 'left' },
+                { label: 'Prix LMT\n(CHF)', w: 24, align: 'center' },
+                { label: 'Prix ex-factory\n(HT)', w: 24, align: 'center' },
+                { label: 'Code-barres', w: 28, align: 'center' },
+            ];
+            const rowH = 7;
+            const headerH = 9;
+
+            // En-têtes de table
+            let x = marginL;
+            pdf.setFillColor(220, 230, 245);
+            pdf.rect(x, y, contentW, headerH, 'F');
+            pdf.setDrawColor(150, 150, 150);
+            pdf.setLineWidth(0.2);
+            pdf.rect(x, y, contentW, headerH);
+
+            cols.forEach(col => {
+                pdf.setFont('helvetica', 'bold');
+                pdf.setFontSize(7.5);
+                const lines = col.label.split('\n');
+                const lineSpacing = 3.5;
+                const fontSizeMm = 7.5 * 0.3528;
+                const blockH = (lines.length - 1) * lineSpacing + fontSizeMm;
+                // baseline of first line so the whole block is vertically centred
+                const cellY = y + (headerH - blockH) / 2 + fontSizeMm;
+                const tx = x + col.w / 2;
+                lines.forEach((line, i) => {
+                    pdf.text(line, tx, cellY + i * lineSpacing, { align: 'center' });
+                });
+                pdf.setDrawColor(150, 150, 150);
+                pdf.line(x, y, x, y + headerH);
+                x += col.w;
+            });
+            pdf.line(x, y, x, y + headerH);
+            y += headerH;
+
+            // Lignes de données
+            const rows = document.querySelectorAll('#conditionnementsTable tbody tr:not(#templateRow)');
+            rows.forEach(tr => {
+                const cells = [
+                    tr.querySelector('input[name="nb_unites[]"]')?.value || '',
+                    tr.querySelector('input[name="conditionnement[]"]')?.value || '',
+                    tr.querySelector('input[name="prix[]"]')?.value || '',
+                    tr.querySelector('input[name="prix_exfactory[]"]')?.value || '',
+                    tr.querySelector('input[name="Code-barres[]"]')?.value || '',
+                ];
+
+                x = marginL;
+                pdf.setFillColor(255, 255, 255);
+                pdf.rect(x, y, contentW, rowH, 'F');
+                pdf.rect(x, y, contentW, rowH);
+
+                cols.forEach((col, i) => {
+                    pdf.setFont('helvetica', 'normal');
+                    pdf.setFontSize(8);
+                    const tx = col.align === 'center' ? x + col.w / 2 : x + 2;
+                    const cellText = pdf.splitTextToSize(cells[i], col.w - 3);
+                    pdf.text(cellText[0] || '', tx, y + 4.5, { align: col.align === 'center' ? 'center' : 'left' });
+                    pdf.setDrawColor(150, 150, 150);
+                    pdf.line(x, y, x, y + rowH);
+                    x += col.w;
+                });
+                pdf.line(x, y, x, y + rowH);
+                y += rowH;
+            });
+
+            // ---- Pied de page ----
+            y += 6;
+            pdf.setFont('helvetica', 'italic');
+            pdf.setFontSize(7);
+            pdf.setTextColor(120, 120, 120);
+            const today = new Date().toLocaleDateString('fr-CH');
+            pdf.text('Document généré le ' + today, pageW - marginR, 290, { align: 'right' });
+
+            // ---- Fusion avec les pièces jointes ----
+            const formPdfBytes = pdf.output('arraybuffer');
+            const { PDFDocument } = PDFLib;
+            const mergedPdf = await PDFDocument.create();
+
+            // Ajouter les pages du formulaire
+            const formDoc = await PDFDocument.load(formPdfBytes);
+            const formPages = await mergedPdf.copyPages(formDoc, formDoc.getPageIndices());
+            formPages.forEach(p => mergedPdf.addPage(p));
+
+            // Ajouter les pièces jointes
+            for (const file of attachedFiles) {
+                const arrayBuffer = await file.arrayBuffer();
+                if (file.type === 'application/pdf') {
+                    const attachDoc = await PDFDocument.load(arrayBuffer);
+                    const pages = await mergedPdf.copyPages(attachDoc, attachDoc.getPageIndices());
+                    pages.forEach(p => mergedPdf.addPage(p));
+                } else if (file.type === 'image/jpeg' || file.type === 'image/jpg') {
+                    const img = await mergedPdf.embedJpg(arrayBuffer);
+                    const page = mergedPdf.addPage([595.28, 841.89]);
+                    const { width, height } = img.scale(1);
+                    const margin = 30;
+                    const scale = Math.min((595.28 - 2 * margin) / width, (841.89 - 2 * margin) / height, 1);
+                    page.drawImage(img, { x: (595.28 - width * scale) / 2, y: (841.89 - height * scale) / 2, width: width * scale, height: height * scale });
+                } else if (file.type === 'image/png') {
+                    const img = await mergedPdf.embedPng(arrayBuffer);
+                    const page = mergedPdf.addPage([595.28, 841.89]);
+                    const { width, height } = img.scale(1);
+                    const margin = 30;
+                    const scale = Math.min((595.28 - 2 * margin) / width, (841.89 - 2 * margin) / height, 1);
+                    page.drawImage(img, { x: (595.28 - width * scale) / 2, y: (841.89 - height * scale) / 2, width: width * scale, height: height * scale });
+                }
+            }
+
+            const mergedBytes = await mergedPdf.save();
+            const blob = new Blob([mergedBytes], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'FAB_demande_création_Refmed.pdf';
+            a.click();
+            URL.revokeObjectURL(url);
+            location.reload();
+        });
+
+        document.getElementById('addRow').addEventListener('click', function() {
+            const tbody = document.querySelector('#conditionnementsTable tbody');
+            const template = document.getElementById('templateRow');
+            const newRow = template.cloneNode(true);
+            newRow.style.display = '';
+            newRow.removeAttribute('id');
+            // Clear the inputs
+            const inputs = newRow.querySelectorAll('input, select');
+            inputs.forEach(input => input.value = '');
+            tbody.appendChild(newRow);
+        });
+
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('deleteRow')) {
+                e.target.closest('tr').remove();
+            }
+        });
+    </script>
+</body>
+</html>
