@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaires Refmed</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 48px 56px;
+      text-align: center;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      color: #1a2e4a;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn {
+      display: block;
+      padding: 18px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background-color: #0d6efd;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+    }
+
+    .btn-secondary {
+      background-color: #198754;
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background-color: #157347;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sélectionnez le formulaire de création d'article dans Refmed</h1>
+    <div class="buttons">
+      <a href="LP_demande_creation_Refmed.html" class="btn btn-primary">
+        Créer un article du commerce
+      </a>
+      <a href="FAB_demande_de_creation_Refmed.html" class="btn btn-secondary">
+        Créer une préparation locale (PM, Séries etc.)
+      </a>
+    </div>
+  </div>
+</body>
+</html>
