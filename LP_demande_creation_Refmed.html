@@ -128,11 +128,89 @@
         }
         .col4 {
             width: 90px;
+        }
+
+        .help-text {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            display: block;
+            width: 910px;
+        }
+
+        .help-text span {
+            font-style: italic;
+            color: #555;
+            font-size: 0.95em;
+            cursor: help;
+            border-bottom: 1px dashed #999;
+        }
+
+        .help-text .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            background-color: #1a2e4a;
+            color: #fff;
+            text-align: left;
+            border-radius: 8px;
+            padding: 12px 16px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: calc(100% + 8px);
+            width: 420px;
+            font-size: 0.88em;
+            line-height: 1.6;
+            z-index: 100;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+
+        .help-text .tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-bottom-color: #1a2e4a;
+        }
+
+        .help-text:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            width: 910px;
+            margin-bottom: 12px;
+        }
+
+        .logos img {
+            max-height: 33px;
+            width: auto;
         }    </style>
 </head>
 <body>
-    <h1>Demande de création d’un article (hors PM) dans REFMED</h1>
-    <form id="formulaire">
+    <h1>Demande de création d'un article (hors PM) dans REFMED</h1>    <div class="logos">
+        <img src="Logos/CHUV-aspect-ratio-320-123.png" alt="CHUV" />
+        <img src="Logos/Refmed.png" alt="Refmed" />
+    </div>
+    <div class="help-text">
+        <span>Comment ça marche ?
+            <div class="tooltip">
+                Ce formulaire est dédié à la création d'articles qui existent dans le commerce mais qui non référencés dans Refmed (par exemple des articles importés).<br><br>
+                1. Remplir les informations générales.<br>
+                2. Remplir les informations du ou des conditionnement(s). Si plusieurs conditionnements doivent être créés vous pouvez ajouter des lignes avec le bouton « + ».<br>
+                3. Exporter le formulaire au format PDF (avec le bouton « Joindre un document » vous pouvez y associer des PDF ou des images, par exemple une notice).<br>
+                4. Envoyer le PDF avec votre demande à l'équipe Refmed.
+            </div>
+        </span>
+    </div>    <form id="formulaire">
         <h2 class="section-title">Informations générales</h2>
         <div class="field">
             <label for="demandeur">Demandeur :</label>
