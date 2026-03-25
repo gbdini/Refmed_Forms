@@ -15,9 +15,11 @@
       font-family: 'Segoe UI', Arial, sans-serif;
       background-color: #f0f4f8;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      padding: 32px 0;
     }
 
     .container {
@@ -58,25 +60,42 @@
     }
 
     .btn-primary {
-      background-color: #0d6efd;
-      color: #ffffff;
+      background-color: #ccffcc;
+      color: #1a2e4a;
     }
 
     .btn-primary:hover {
-      background-color: #0b5ed7;
+      background-color: #aaffaa;
     }
 
     .btn-secondary {
-      background-color: #198754;
-      color: #ffffff;
+      background-color: #ffb6c1;
+      color: #1a2e4a;
     }
 
     .btn-secondary:hover {
-      background-color: #157347;
+      background-color: #ff99aa;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    .logos img {
+      max-height: 80px;
+      width: auto;
     }
   </style>
 </head>
 <body>
+  <div class="logos">
+    <img src="Logos/CHUV-aspect-ratio-320-123.png" alt="CHUV" />
+    <img src="Logos/Refmed.png" alt="Refmed" />
+  </div>
   <div class="container">
     <h1>Sélectionnez le formulaire de création d'article dans Refmed</h1>
     <div class="buttons">
