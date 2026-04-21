@@ -419,6 +419,11 @@
         </div>
 
         <div class="field">
+            <label for="conservation_apres_ouverture_ouverte">Conservation après ouverture* :</label>
+            <input type="text" id="conservation_apres_ouverture_ouverte" name="conservation_apres_ouverture_ouverte" placeholder="Ex : 30 jours">
+        </div>
+
+        <div class="field">
             <label for="type_preparation">Type de préparation *:</label>
             <select id="type_preparation" name="type_preparation" required>
                 <option value="">Sélectionnez...</option>
@@ -614,6 +619,7 @@
             drawField('Dosage / concentration :', dosage);
             drawField('Condition de conservation :', getVal('Condition de conservation'));
             drawField('Durée de conservation :', getVal('conservation_apres_ouverture'));
+            drawField('Conservation après ouverture :', getVal('conservation_apres_ouverture_ouverte'));
             drawField('Type de préparation :', getVal('type_preparation'));
             drawField('Préparation centralisée :', getVal('info_pro'));
 
